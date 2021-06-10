@@ -10,15 +10,19 @@
 }
 
 body{
-    background-color: #f1eaea;
+    background-color: #f8f2f2;
 }
 
 /* Contenedor principal*/
 .container{
+    background-color: #e9e9e996;
     width: 90%;
     max-width: 1024px;
-    border: 1px solid #000;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 2px 4px 10px 3px #686767;
     margin: 20px auto;
+    padding: 10px;
     display: grid;
     grid-gap: 25px;
     grid-template-columns: repeat( 3, 1fr) ;
@@ -74,8 +78,10 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
 }
+.container .contenedor .refernce .text-title{
+    font-size: 25px;
+}
 
-.container .contenedor .ingredientes,
 .container .contenedor .instrucciones{
     grid-column-start: 1;
     grid-column-end: 3 ;
@@ -83,36 +89,56 @@ body{
 }
 
 /* Ingredientes */
+.container .contenedor .refernce .ingredientes{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-template-rows: repeat(2, auto);
+}
+
 .container .contenedor .refernce .ingredientes .text-title{
-    font-size: 25px;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
+/* Pre comienzo */
 .container .contenedor .refernce .ingredientes .text-subtitle{
-    font-style: Italic;
     font-size: 20px;
-    color:#555353;
+    font-style: italic;
+    color: #535353;
+    padding: 15px 0;
+}
+.container .contenedor .refernce .ingredientes .pre-stars{
+    grid-row-start: 1 ;
+    grid-row-end: 2;
 }
 
-.container .contenedor .refernce .ingredientes .steps{
-    display: flex;
-    flex-direction: column;
-}
-.container .contenedor .refernce .ingredientes .steps .check-step{
-    font-size: 16px;
-    line-height: 25px;
-    text-align: left;
+.container .contenedor .refernce .ingredientes .pre-stars .steps,
+.container .contenedor .refernce .ingredientes .stars .steps{
+    display: grid;
+    grid-template-columns: 20px repeat(3, auto);
+    grid-gap: 25px;
+    margin-bottom: 10px;
 }
 
-.container .contenedor .refernce .ingredientes span{
+.container .contenedor .refernce .ingredientes .pre-stars .steps input[type="checkbox"],
+.container .contenedor .refernce .ingredientes .stars input[type="checkbox"]{
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.container .contenedor .refernce .ingredientes .pre-stars .steps .check-step,
+.container .contenedor .refernce .ingredientes .stars .steps .check-step{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 85%;
+    font-size: 16px
+}
+
+.container .contenedor .refernce .ingredientes .pre-stars .steps .check-step span,
+.container .contenedor .refernce .ingredientes .stars .steps .check-step span{
     color: #131111;
     font-weight: bold;
-}
-
-.container .contenedor .refernce .ingredientes .steps input[type="checkbox"]{
-    margin: 0 10px;
-}
-.container .contenedor .refernce .ingredientes .steps input[type="checkbox"]:hover{
-    cursor: pointer;
 }
 
 /* Intrucciones*/
@@ -136,6 +162,12 @@ body{
     grid-column-end: 3;
     width: 90%;
     font-size: 17px;
+}
+
+.container .contenedor .refernce .ingredientes,
+.container .contenedor .refernce .instrucciones,
+.container .pie-pagina{
+    margin-top: 50px;
 }
 
 /* Asidebar*/
