@@ -94,14 +94,12 @@ body{
 }
 
 .container .contenedor .refernce .ingredientes .steps{
-    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
 }
 .container .contenedor .refernce .ingredientes .steps .check-step{
-    font-size: 17px;
+    font-size: 16px;
     line-height: 25px;
-    overflow: hidden;
-    border: 1px solid #000;
-    width: 85%;
     text-align: left;
 }
 
@@ -110,10 +108,34 @@ body{
     font-weight: bold;
 }
 
-.container .contenedor .refernce .ingredientes .steps input{
+.container .contenedor .refernce .ingredientes .steps input[type="checkbox"]{
     margin: 0 10px;
-    width: 30px;
-    
+}
+.container .contenedor .refernce .ingredientes .steps input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+/* Intrucciones*/
+.container .contenedor .refernce .instrucciones{
+    display: grid;
+}
+.container .contenedor .refernce .instrucciones .icon-one .icon-number{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.container .contenedor .refernce .instrucciones .icon-one{
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    grid-gap: 25px;
+}
+.container .contenedor .refernce .instrucciones .icon-one .text-help{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 90%;
+    font-size: 17px;
 }
 
 /* Asidebar*/
