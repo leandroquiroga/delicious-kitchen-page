@@ -178,7 +178,7 @@ body{
 }
 
 .container .contenedor .barra-lateral .items{
-    width: 64%;
+    width: 80%;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 6px 3px #a0a0a0 ;
@@ -256,4 +256,75 @@ body{
 }
 .pie-pagina > .redes > .list-redes > a > .bi{
     margin: 10px 15px;
+}
+
+/*Resposive*/
+
+@media screen and (max-width: 988px) {
+    .container .cabezera{
+        grid-column-start: 1 ;
+        grid-column-end: 4 ;
+    }
+}
+
+@media screen and (max-width: 895px){
+    .container .contenedor .refernce{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .container .contenedor .barra-lateral{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .container .contenedor .barra-lateral .items{
+        width: 100%;
+        padding: 5px;
+    }
+
+    .container .contenedor .barra-lateral .items .timer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .container .contenedor .barra-lateral .items .timers{
+        display: inline-flex;
+    }
+
+    .container .contenedor .refernce .ingredientes,
+    .container .contenedor .refernce .instrucciones{
+        grid-column-end: 4;
+    }
+}
+
+@media screen and (max-width: 775px){
+    .container .cabezera{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .container .cabezera .title,
+    .container .cabezera .subtitle{
+        grid-column: 1/5;
+    }
+    .container .contenedor .barra-lateral .items{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .container .contenedor .barra-lateral .items{
+        padding: 0;
+    }
+    .container .contenedor .barra-lateral .items .img-items{
+        width: 25px;
+    }
+    .container .contenedor .barra-lateral .items .yields .title-yield .text-yield, 
+    .container .contenedor .barra-lateral .items .timer .title-timer .text-timer{
+        font-size: 12px;
+    }
+
+    .container .contenedor .barra-lateral .items .yields, 
+    .container .contenedor .barra-lateral .items .timer{
+        padding: 5px;
+    }
+
 }
