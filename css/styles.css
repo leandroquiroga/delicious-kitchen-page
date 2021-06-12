@@ -19,8 +19,6 @@ body{
     width: 90%;
     max-width: 1024px;
     border: none;
-    border-radius: 40px;
-    box-shadow: 2px 4px 10px 3px #686767;
     margin: 20px auto;
     padding: 10px;
     display: grid;
