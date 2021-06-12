@@ -328,3 +328,14 @@ body{
     }
 
 }
+
+@media screen and (max-width: 470px){
+    .container .contenedor .barra-lateral .items .img-items{
+        width: 20px;
+    }
+    .container .contenedor .barra-lateral .items .yields .title-yield .text-yield, 
+    .container .contenedor .barra-lateral .items .timer .title-timer .text-timer{
+        font-size: 10px;
+    }
+
+}
