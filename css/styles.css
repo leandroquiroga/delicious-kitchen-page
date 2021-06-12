@@ -33,8 +33,7 @@ body{
 .container .contenedor,
 .container .contenedor .ingredientes,
 .container .contenedor .barra-lateral,
-.container .contenedor .instrucciones,
-.container .contenedor .pie-pagina{
+.container .contenedor .instrucciones{
     display: grid;
     grid-gap: 15px;
 }
@@ -230,3 +229,33 @@ body{
 }
 
 /* Footer*/
+.pie-pagina{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.pie-pagina > .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.pie-pagina span{
+    align-items: flex-end;
+    font: 15px 'Monserrat', sans-serif;
+}
+
+/* Icon */
+.pie-pagina > .redes > .list-redes a{
+    text-decoration: none;
+    color: #000000;
+    justify-content: center;
+}
+.pie-pagina > .redes > .list-redes > a > .bi{
+    margin: 10px 15px;
+}
